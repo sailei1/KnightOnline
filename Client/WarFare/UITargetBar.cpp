@@ -8,6 +8,7 @@
 
 #include "N3UIProgress.h"
 #include "N3UIString.h"
+#include "resource.h"
 
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -69,7 +70,8 @@ bool CUITargetBar::Load(HANDLE hFile)
 	if(m_pProgressHP) m_pProgressHP->SetRange(0, 100);
 	if(m_pStringID) // 폰트를 바꾼다.
 	{
-		std::string szFontID = "Arial"; //::_LoadStringFromResource(IDS_FONT_ID, szFontID);
+		std::string szFontID;
+		::_LoadStringFromResource(IDS_FONT_ID, szFontID);
 		
 		DWORD dwH = m_pStringID->GetFontHeight();
 		m_pStringID->SetFont(szFontID, dwH, FALSE, FALSE);
