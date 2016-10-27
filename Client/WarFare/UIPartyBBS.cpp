@@ -14,6 +14,7 @@
 #include "N3UIList.h"
 #include "N3UIString.h"
 #include "N3UIButton.h"
+#include "resource.h"
 
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -143,13 +144,13 @@ bool CUIPartyBBS::ReceiveMessage(CN3UIBase* pSender, DWORD dwMsg)
 		else if(pSender == m_pBtn_Register)
 		{
 			std::string szMsg;
-			szMsg = "IDS_PARTY_BBS_REGISTER";//::_LoadStringFromResource(IDS_PARTY_BBS_REGISTER, szMsg);
+			::_LoadStringFromResource(IDS_PARTY_BBS_REGISTER, szMsg);
 			CGameProcedure::MessageBoxPost(szMsg, "", MB_YESNO, BEHAVIOR_PARTY_BBS_REGISTER); // 기사단 해체 물어보기..
 		}
 		else if(pSender == m_pBtn_RegisterCancel)
 		{
 			std::string szMsg;
-			szMsg = "IDS_PARTY_BBS_REGISTER_CANCEL";//::_LoadStringFromResource(IDS_PARTY_BBS_REGISTER_CANCEL, szMsg);
+			::_LoadStringFromResource(IDS_PARTY_BBS_REGISTER_CANCEL, szMsg);
 			CGameProcedure::MessageBoxPost(szMsg, "", MB_YESNO, BEHAVIOR_PARTY_BBS_REGISTER_CANCEL); // 기사단 해체 물어보기..
 		}
 		else if(pSender == m_pBtn_Whisper)
@@ -319,7 +320,7 @@ void CUIPartyBBS::PartyStringSet(BYTE byType)
 
 		char szBuff[128];
 		std::string szMsg;
-		szMsg = "IDS_WANT_PARTY_MEMBER";//::_LoadStringFromResource(IDS_WANT_PARTY_MEMBER, szMsg);
+		::_LoadStringFromResource(IDS_WANT_PARTY_MEMBER, szMsg);
 		sprintf(szBuff, szMsg.c_str(), iLMin, iLMax);
 		CGameProcedure::s_pPlayer->InfoStringSet(szBuff, 0xff00ff00);
 		CGameProcedure::s_pProcMain->MsgSend_StateChange(N3_SP_STATE_CHANGE_RECRUIT_PARTY, 0x02); // 파티 요청.. 취소
@@ -487,9 +488,9 @@ void CUIPartyBBS::RequestParty()
 			{//나 자신에게는 파티 신청을 못하게 한다...
 				std::string szMsg;
 				if (CGameProcedure::s_pProcMain->MsgSend_PartyOrForceCreate(0, IPB.szID))
-					szMsg = "IDS_PARTY_INVITE";//::_LoadStringFromResource(IDS_PARTY_INVITE, szMsg); // 파티
+					::_LoadStringFromResource(IDS_PARTY_INVITE, szMsg); // 파티
 				else
-					szMsg = "IDS_PARTY_INVITE_FAILED";//::_LoadStringFromResource(IDS_PARTY_INVITE_FAILED, szMsg); // 파티 초대 실패
+					::_LoadStringFromResource(IDS_PARTY_INVITE_FAILED, szMsg); // 파티 초대 실패
 				CGameProcedure::s_pProcMain->MsgOutput(IPB.szID + szMsg, 0xffffff00);
 				break;
 			}
