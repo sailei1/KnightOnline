@@ -96,13 +96,13 @@ enum ItemSlotType
 #define WEAPON_LONGBOW			8
 #define WEAPON_LAUNCHER			10
 #define WEAPON_STAFF			11
-#define WEAPON_ARROW			12	// ��ų ���
-#define WEAPON_JAVELIN			13	// ��ų ���
+#define WEAPON_ARROW			12	
+#define WEAPON_JAVELIN			13	
 #define WEAPON_MACE2			18
-#define WEAPON_WORRIOR_AC		21	// ��ų ���
-#define WEAPON_LOG_AC			22	// ��ų ���
-#define WEAPON_WIZARD_AC		23	// ��ų ���
-#define WEAPON_PRIEST_AC		24	// ��ų ���
+#define WEAPON_WORRIOR_AC		21	
+#define WEAPON_LOG_AC			22	
+#define WEAPON_WIZARD_AC		23	
+#define WEAPON_PRIEST_AC		24	
 #define WEAPON_PICKAXE			61	// Unlike the others, this is just the Kind field as-is (not / 10).
 
 #define ACCESSORY_EARRING		91
@@ -114,10 +114,10 @@ enum ItemSlotType
 
 ////////////////////////////////////////////////////////////
 // User Status //
-#define USER_STANDING			0X01		// �� �ִ�.
-#define USER_SITDOWN			0X02		// �ɾ� �ִ�.
-#define USER_DEAD				0x03		// ��Ŷ�
-//#define USER_BLINKING			0x04		// ��� ��Ƴ���!!!
+#define USER_STANDING			0X01		
+#define USER_SITDOWN			0X02		
+#define USER_DEAD				0x03		
+//#define USER_BLINKING			0x04		
 
 ////////////////////////////////////////////////////////////
 // Durability Type
@@ -136,16 +136,16 @@ enum ItemSlotType
 //#define TRAINEE				0x02
 #define PUNISH				0x01	
 
-#define CHIEF				0x01	// ����
-#define VICECHIEF			0x02	// �δ���
-#define TRAINEE				0x05	// ���
-#define COMMAND_CAPTAIN		100		// ���ֱ���
+#define CHIEF				0x01	
+#define VICECHIEF			0x02	
+#define TRAINEE				0x05	
+#define COMMAND_CAPTAIN		100		
 ////////////////////////////////////////////////////////////
 
 #define CLAN_COIN_REQUIREMENT	500000
 #define CLAN_LEVEL_REQUIREMENT	20
 
-#define ITEM_GOLD			900000000	// �� ������ ��ȣ...
+#define ITEM_GOLD			900000000	
 #define ITEM_NO_TRADE		900000001	// Cannot be traded, sold or stored.
 
 ////////////////////////////////////////////////////////////

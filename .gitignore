@@ -41,6 +41,7 @@ Makefile
 *.dSYM
 *.exp
 *.suo
+*.opensdf
 Client/WarFare/Debug/gameprocmain.new.obj.enc
 Client/WarFare/Debug/gameprocmain.obj.enc
 Client/WarFare/Debug/Log.txt
